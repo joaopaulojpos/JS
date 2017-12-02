@@ -10,6 +10,7 @@ import com.dellpc.js.models.Clima;
 import com.dellpc.js.models.ClimaResposta;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -46,12 +47,17 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()){
 
                     ClimaResposta climaResposta = response.body();
-                    ArrayList<Clima> listaClima = climaResposta.getResults();
+                    Clima listaClima = climaResposta.getResults();
 
+                    Log.i(TAG, " Clima " + listaClima.getDescription());
+                    Log.i(TAG, " Data " + listaClima.getDate());
+
+                    /**
                     for (int i = 0; i < listaClima.size(); i++){
                         Clima c = listaClima.get(i);
                         Log.i(TAG, " Clima: " + c.getDescription());
                     }
+                     */
 
                 }else {
                     Log.e(TAG," onResponse " + response.errorBody());

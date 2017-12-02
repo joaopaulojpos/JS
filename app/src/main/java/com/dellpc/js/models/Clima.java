@@ -5,8 +5,17 @@ package com.dellpc.js.models;
  */
 
 public class Clima {
+    private String date;
     private String description;
     private String currently;
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public String getDescription() {
         return description;
