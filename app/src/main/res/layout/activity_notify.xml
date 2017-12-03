@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context="com.dellpc.js.MainActivity">
+    tools:context="com.dellpc.js.NotifyActivity">
 
     <EditText
         android:id="@+id/edtTexto"
@@ -26,4 +25,5 @@
         android:layout_marginTop="12dp"
         android:onClick="gerarNotificacao"
         android:text="Enviar Notificação" />
+
 </RelativeLayout>

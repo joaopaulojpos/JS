@@ -33,14 +33,12 @@ public class MainActivity extends AppCompatActivity {
 
     private Retrofit retrofit;
 
-    final EditText msg = (EditText)findViewById(R.id.edtTexto);
-    Button enviar = (Button)findViewById(R.id.btnEnviar);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /**
         enviar.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
@@ -60,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 notificationManager.notify(id, notification);
             }
         });
+        */
 
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.hgbrasil.com/weather/")
@@ -102,5 +101,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }
