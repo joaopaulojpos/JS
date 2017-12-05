@@ -13,17 +13,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Hello World"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
-
-    <Button
-        android:id="@+id/btnEnviar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/edtTexto"
-        android:layout_alignRight="@+id/edtTexto"
-        android:layout_below="@+id/edtTexto"
-        android:layout_marginTop="12dp"
-        android:onClick="gerarNotificacao"
-        android:text="Enviar Notificação" />
 </RelativeLayout>

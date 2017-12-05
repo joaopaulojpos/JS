@@ -8,6 +8,15 @@ public class Clima {
     private String date;
     private String description;
     private String currently;
+    private String condition_slug;
+
+    public String getCondition_slug() {
+        return condition_slug;
+    }
+
+    public void setCondition_slug(String condition_slug) {
+        this.condition_slug = condition_slug;
+    }
 
     public String getDate() {
         return date;

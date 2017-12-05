@@ -19,12 +19,16 @@ import android.widget.EditText;
 
 public class NotifyActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notify);
+
+
     }
-        public void gerarNotificacao(View view){
+
+    public void gerarNotificacao(){
 
             NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
             PendingIntent p = PendingIntent.getActivity(this, 0, new Intent(this, NotificationActivity.class), 0);
@@ -37,16 +41,15 @@ public class NotifyActivity extends AppCompatActivity {
             builder.setContentIntent(p);
 
             NotificationCompat.InboxStyle style = new NotificationCompat.InboxStyle();
-            String [] descs = new String[]{"Meu Analista Consegui,","fazer essa bendita notificação", "Vem criar caso não mago"};
+            String [] descs = new String[]{"Atenção para o clima no dia","situacao" ,"O clima será:"};
             for(int i = 0; i < descs.length; i++){
                 style.addLine(descs[i]);
             }
             builder.setStyle(style);
 
             Notification n = builder.build();
-            n.vibrate = new long[]{150, 300, 150, 600};
             n.flags = Notification.FLAG_AUTO_CANCEL;
-            nm.notify(R.mipmap.ic_launcher, n);
+            nm.notify(R.drawable.notifi, n);
 
             try{
                 Uri som = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
