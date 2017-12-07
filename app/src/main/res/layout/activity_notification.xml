@@ -7,11 +7,12 @@
     tools:context="com.dellpc.js.NotificationActivity">
 
   <LinearLayout
-      android:layout_marginTop="50dp"
+      android:layout_marginTop="60dp"
       android:orientation="horizontal"
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
         <LinearLayout
+            android:layout_marginLeft="40dp"
             android:orientation="vertical"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -29,7 +30,7 @@
                 android:layout_height="100dp" />
         </LinearLayout>
 
-      <LinearLayout
+        <LinearLayout
           android:orientation="vertical"
           android:layout_gravity="center"
           android:layout_weight="1"
